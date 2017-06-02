@@ -75,136 +75,18 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/01/纯-css-实现抽屉联动效果/" data-id="cj3f7v79v0000ao5hydzabs4s" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/01/纯-css-实现抽屉联动效果/" data-id="cj3flzfiz00003t5hx1tmgg6u" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <p style="color: #ccc;">前言想写点什么客套的话来显得自己 hin 幽默 - -！<br>还是严肃一点让自己看起来像一个学者吧</p>
-
-
-
-<p>仿 <span style="color: #ccc;">点它可看原网的好吗大哥？👉</span> <a href="http://www.batman-3d.de" target="_blank" rel="external">batman-3d</a> 网站实现其中抽屉联动效果</p>
-<p>首先 <strong>结构</strong> 创建</p>
-<pre><code>&lt;div class=&quot;drawer&quot;&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-</code></pre><p>加上样式，样式的原理是 <strong>后一个元素</strong> 覆盖上 <strong>前一个兄弟元素</strong> 宽度的一半</p>
-<p>图片的实现效果是 sprite 技术 ／ 雪碧图</p>
-<p>不要再一脸懵哔——问我雪碧图如何实现的了好吗？在课上我是不是说过 “把大象装进冰箱需要几步”？</p>
-<p>每个人都告诉我需要3步</p>
-<ul>
-<li>把冰箱门打开（建视口）</li>
-<li>把大象放进去（插背景图）</li>
-<li>把冰箱门关上（改变背景图位置）</li>
-</ul>
-<pre><code>.drawer{
-     padding: 12px;
-     overflow-x: hidden;
- }
-.drawer ul{
-    position: relative;
-    height: 100px;
-    overflow-x: hidden;
-}
-.drawer li{
-    width: 220px;
-    height: 100px;
-    background: url(&quot;img/menu-button.jpg&quot;);
-    position: absolute;
-    transition: left ease-in .6s;     //取值只取过 all ?有疑惑？看到最底下去
-}
-.drawer li:nth-child(1){
-    top: 0;
-    left: 0;
-}
-.drawer li:nth-child(2){
-    background-position: -220px 0;
-    top: 0;
-    left: 130px;
-}
-.drawer li:nth-child(3){
-    background-position: -440px 0;
-    top: 0;
-    left: 260px;
-}
-.drawer li:nth-child(4){
-    background-position: -660px 0;
-    top: 0;
-    left: 390px;
-}
-.drawer li:nth-child(5){
-    background-position: -880px 0;
-    top: 0;
-    left: 520px;
-}
-.drawer li:nth-child(6){
-    background-position: -1100px 0;
-    top: 0;
-    left: 650px;
-}
-</code></pre><p>ok 联动效果的关键点来了，关键之处在于👉 ~ 选择器，它被解释为：</p>
-<pre><code>E ~ F 匹配任何在 E 元素之后的同级 F 元素
-</code></pre><p>所以现在选择器需要 <strong>当</strong> 移入 <strong>第一个 li</strong> 时，<strong>后面的谁谁谁</strong> 怎样怎样，于是就有了以下</p>
-<pre><code>.drawer li:first-child:hover~li:nth-child(2){
-    left: 220px;
-}
-.drawer li:first-child:hover~li:nth-child(3){
-    left: 330px;
-}
-.drawer li:first-child:hover~li:nth-child(4){
-    left: 440px;
-}
-.drawer li:first-child:hover~li:nth-child(5){
-    left: 550px;
-}
-.drawer li:first-child:hover~li:nth-child(6){
-    left: 660px;
-}    
-</code></pre><p>选择完移入第一个，后面的兄弟级的联动效果以后，再为以后的每个 li 设置 <strong>当移入时，自己如何变化</strong> 。变化过程不仅移动了元素位置，还移动了背景图的位置，所以不仅 position 的值在改变， background-position 也在变</p>
-<pre><code>.drawer li:first-child:hover{
-    background-position: 0 -100px;
-}
-.drawer li:nth-child(2):hover{
-    left: 40px;
-    background-position: -220px -100px;
-}
-.drawer li:nth-child(3):hover{
-    left: 170px;
-    background-position: -440px -100px;
-}
-.drawer li:nth-child(4):hover{
-    left: 300px;
-    background-position: -660px -100px;
-}
-.drawer li:nth-child(5):hover{
-    left: 440px;
-    background-position: -880px -100px;
-}
-.drawer li:nth-child(6):hover{
-    left: 570px;
-    background-position: -1100px -100px;
-}
-</code></pre><p>最后加上 <strong>向上移动</strong> 的效果，增加 “抖动” 感</p>
-<pre><code>.drawer li:hover{
-    cursor: pointer;
-    top: -2px;
-}    
-</code></pre><p>在上面的代码中，出现了 transition 属性中的 left 值</p>
-<pre><code>.drawer li{
-    ...
-    transition: left ease-in .6s;
-}    
-</code></pre><p>我们已经知道 li 在移入时位置 (position) 在变，背景图位置 (background-position) 也在变，<br>如果取值为 all 表示 position 和 background-position 同时经过一段时间在渐变，那么就能见到背景图的改变轨迹了，而我们只需要 position 具有渐变效果，你背景图 “咻——” 地一下变个位置就好咯 ╮（╯＿╰）╭</p>
-
+        <p></p><p style="color: #ccc;">前言想写点什么客套的话来显得自己 hin 幽默 - -！<br>还是严肃一点让自己看起来像一个学者吧</p><br>
+        
+          <p class="article-more-link">
+            <a href="/2017/06/01/纯-css-实现抽屉联动效果/#more" class="more-link">More <span class="meta-nav">→</span></a>
+          </p>
+        
       
     </div><!-- .entry-content -->
 
@@ -240,7 +122,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/05/30/hello-world/" data-id="cj3f7v7a30001ao5hv7xg8s4g" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/05/30/hello-world/" data-id="cj3fluv6300002o5hi2tycu6e" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
