@@ -1,0 +1,180 @@
+*{margin: 0;  padding: 0;}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    /*width: 100%;*/
+    background: black;
+    background: url("img/batman-body.jpg") fixed 50% 0;
+    /*background-size: 100% auto;*/
+}
+.container{
+    width: 805px;
+    height: 2000px;
+    margin: auto;
+}
+header{
+    font-size: 0;
+}
+.content{
+    width: 805px;
+    background-color: #fff;
+}
+.content>i:first-child{
+    display: block;
+    height: 300px;
+    background-color: rgba(255,0,255,.5);
+}
+/*   ---  抽屉第一种 定位----   */
+.drawer{
+     padding: 12px;
+     overflow-x: hidden;
+ }
+.drawer ul{
+    position: relative;
+    height: 100px;
+    overflow-x: hidden;
+}
+.drawer li{
+    width: 220px;
+    height: 100px;
+    background: url("img/menu-button.jpg");
+    position: absolute;
+    transition: left ease-in .6s;
+}
+.drawer li:nth-child(1){
+    top: 0;
+    left: 0;
+}
+.drawer li:nth-child(2){
+    background-position: -220px 0;
+    top: 0;
+    left: 130px;
+}
+.drawer li:nth-child(3){
+    background-position: -440px 0;
+    top: 0;
+    left: 260px;
+}
+.drawer li:nth-child(4){
+    background-position: -660px 0;
+    top: 0;
+    left: 390px;
+}
+.drawer li:nth-child(5){
+    background-position: -880px 0;
+    top: 0;
+    left: 520px;
+}
+.drawer li:nth-child(6){
+    background-position: -1100px 0;
+    top: 0;
+    left: 650px;
+}
+.drawer li:hover{
+    cursor: pointer;
+    top: -2px;
+}
+/*.drawer li:not(:first-child):hover{*/
+    /*left: -130px;*/
+/*}*/
+
+/*移入第一个 其他的...*/
+.drawer li:first-child:hover+li:nth-child(2){
+    left: 220px;
+}
+.drawer li:first-child:hover+li:nth-child(3){
+    left: 330px;
+}
+.drawer li:first-child:hover+li:nth-child(4){
+    left: 440px;
+}
+.drawer li:first-child:hover+li:nth-child(5){
+    left: 550px;
+}
+.drawer li:first-child:hover+li:nth-child(6){
+    left: 660px;
+}
+
+.drawer li:first-child:hover{
+    background-position: 0 -100px;
+}
+.drawer li:nth-child(2):hover{
+    left: 40px;
+    background-position: -220px -100px;
+}
+.drawer li:nth-child(3):hover{
+    left: 170px;
+    background-position: -440px -100px;
+}
+.drawer li:nth-child(4):hover{
+    left: 300px;
+    background-position: -660px -100px;
+}
+.drawer li:nth-child(5):hover{
+    left: 440px;
+    background-position: -880px -100px;
+}
+.drawer li:nth-child(6):hover{
+    left: 570px;
+    background-position: -1100px -100px;
+}
+
+
+/*   ---抽屉第二种 浮动 + margin ----   */
+
+.drawer2{
+    display: none;
+    padding: 12px;
+    /*overflow: hidden;*/
+}
+.drawer2 ul{
+    /*width: 内容805 + 130*/
+    /*width: 910px;*/
+    width: 1320px;
+    /*position: relative;*/
+    height: 100px;
+    /*overflow: hidden;*/
+    outline: 1px solid #02C1DE;
+}
+.drawer2 li{
+    width: 220px;
+    height: 100px;
+    background: url("img/menu-button.jpg");
+    /*transition: all linear 1s;*/
+    float: left;
+    /*position: relative;*/
+}
+.drawer2 li:not(:first-child){
+    margin-left: -88px;
+}
+/*.drawer2 li:first-child:hover~li{*/
+    /*margin-right: 2px;*/
+/*}*/
+.drawer2 li:first-child:hover~li:nth-child(2){
+    margin-left: 2px;
+}
+.drawer2 li:not(:first-child):hover{
+    /*position: relative;*/
+    /*left: -130px;*/
+    /*margin-left: -130px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
