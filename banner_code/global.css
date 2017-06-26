@@ -5,7 +5,6 @@
 a{
     color: #fff;
     text-decoration: none;
-
 }
 a:hover{
     color: red;
@@ -19,30 +18,28 @@ li{
     width: 100%;
     height: 498px;
     position: relative;
-    margin:auto;
-    background: #000000;
-    z-index: 3;
+    background: #000;
+    overflow: hidden;
 }
-.main .cont1{
+.cont{
     width:1024px;
     height: auto;
     margin:auto;
     position: relative;
 }
-.main .cont1 .imgs{
+.cont .imgs{
     width:100%;
     height: 500px;
     position: absolute;
     overflow: hidden;
 }
 
-.main .cont1 .imgs img{
+.cont .imgs img{
     width: 100%;
-    /*animation:tupian 3s infinite;*/
 }
 
-.main .cont1 .nav{
-    z-index: 3;
+.nav{
+    z-index: 2;
     width:183px;
     height: 436px;
     border: 1px solid white;
@@ -50,50 +47,50 @@ li{
     top:30px;
     right: 50px;
 }
-.main .cont1 .nav ul{
+.nav ul{
     width:186px;
     height: 100%;
 }
-.main .cont1 .nav ul li{
+.nav ul li{
     width:100%;
     height: 93px;
     border:2px solid gray;
     margin-left: -3px;
     margin-top:10px;
 }
-.main .cont1 .nav ul li:hover{
+.nav ul li:hover{
     border:2px solid white;
 }
-.main .cont1 .nav ul li img{
+.nav ul li img{
     width: 100%;
     position: absolute;
 }
-.main .cont1 .nav ul li a{
+.nav ul li a{
     display: inline-block;
     position: relative;
     width:100%;
     height: 100%;
 }
-.main .cont1 .nav ul li em{
+.nav ul li i{
     display: inline-block;
     position: absolute;
     width:100%;
     height: 100%;
     background: rgba(0,0,0,.2);
 }
-.main .cont1 .nav ul li em:hover{
+.nav ul li i:hover{
     background: rgba(0,0,0,0);
 }
 
-.main .cont1 .mengban{
-    position: absolute;
+.introduce{
     width:441px;
     height:140px;
+    background: rgba(0,0,0,.7);
+    position: absolute;
     left:160px;
     bottom: 45px;
-    background: rgba(0,0,0,.7);
 }
-.mengban .con1{
+.introduce .con1{
     width:418px;
     height: 121px;
     margin:8px auto;
@@ -111,6 +108,21 @@ li{
     color: white;
     overflow: hidden;
     text-align: center;
-    padding:15px 15px 0;
+    padding: 15px 15px 0;
 }
-
+header{
+    width: 100%;
+    height: 50px;
+    border: 2px dashed #58a;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: rgba(255,197,0,.5);
+}
+footer{
+    height: 500px;
+    background-color: rgba(255,0,0,.5);
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;
+}
