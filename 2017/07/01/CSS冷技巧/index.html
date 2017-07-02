@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="分享几个 css 冷窍门儿" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>CSS冷技巧 | wonderland of code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="分享几个 css 冷窍门儿">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS冷技巧">
+<meta property="og:url" content="http://yoursite.com/2017/07/01/CSS冷技巧/index.html">
+<meta property="og:site_name" content="wonderland of code">
+<meta property="og:description" content="分享几个 css 冷窍门儿">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fh4ruv7o13j30e100zaa1.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fh4rvi49auj30c0010jrf.jpg">
+<meta property="og:updated_time" content="2017-07-02T13:25:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS冷技巧">
+<meta name="twitter:description" content="分享几个 css 冷窍门儿">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fh4ruv7o13j30e100zaa1.jpg">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="wonderland of code" rel="home">wonderland of code</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-CSS冷技巧" class="post-CSS冷技巧 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      CSS冷技巧
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/07/01/CSS冷技巧/" data-id="cj4mr1zdo0000mt5ha6nryage" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>分享几个 css 冷窍门儿</p>
+<a id="more"></a>
+<h2 style="color: #58a;">1. 让非输入控件也可编辑</h2>
+
+<p>在标记中除了输入控件支持用户输入外，为标记添加 <code>contenteditable</code> 属性也能达到相同效果</p>
+<p>👇 点击试试：</p>
+<div contenteditable="" style="text-align: center; color: #7d7d7d;">我是个 div 标记可以被编辑</div><br><hr><br><br>👇 点击试试：<br><br><p contenteditable="" style="text-align: center; color: #7d7d7d;">我是个 p 标记也可以被编辑</p><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div contenteditable&gt;我可以被编辑&lt;/div&gt;</div><div class="line">&lt;p contenteditable&gt;我也可以被编辑&lt;/p&gt;</div></pre></td></tr></table></figure><br><br><h2 style="color: #58a;">2. 恶作剧去除鼠标箭头</h2><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">    cursor: none !important;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br><h2 style="color: #58a;">3. 当 a 标记没有文本值只有 href 属性值时，显示链接</h2><br><br>举个栗子：当 <code>&lt;a href=&quot;http://www.baidu.com&quot;&gt;&lt;/a&gt;</code> 标记之间没有文本值，利用以下技巧可以让页面显示为：<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a[href^=&quot;http&quot;]:empty::before &#123;</div><div class="line">    content: attr(href);</div><div class="line">&#125;</div><div class="line">&lt;a href=&quot;http://www.baidu.com&quot;&gt;&lt;/a&gt;</div></pre></td></tr></table></figure><br><br><h2 style="color: #58a;">4. border-radius</h2><br><br>我们已经知道 <code>border-radius: 10px;</code> 可以为元素添加圆角效果<br><br><div style=" width: 100px;height: 60px;border: 1px solid;border-radius: 10px;"></div>
+
+<p><br><br>或者是 <code>border-radius: 50px 10px 50px 10px;</code></p>
+<div style="width: 140px;height: 80px;border: 1px solid;border-radius: 50px 10px 50px 10px;"></div>
+
+<p><br><br>也许你还没见过这样的 <code>border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;</code></p>
+<div style="width: 126px;height: 180px;border: 1px solid;border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;"></div>
+
+<p><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box2-2&#123;</div><div class="line">    width: 126px;</div><div class="line">    height: 180px;</div><div class="line">    border: 1px solid;</div><div class="line">    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>斜线分隔符 <code>/</code> 前面的值分别表示</p>
+<ul>
+<li>左上角圆角横向半径值</li>
+<li>右上角圆角横向半径值</li>
+<li>右下角圆角横向半径值</li>
+<li>左下角圆角横向半径值 </li>
+</ul>
+<p><code>/</code> 分隔符后面的值分别表示</p>
+<ul>
+<li>左上角圆角纵向半径值</li>
+<li>右上角圆角纵向半径值</li>
+<li>右下角圆角纵向半径值</li>
+<li>左下角圆角纵向半径值</li>
+</ul>
+<h2 style="color: #58a;">4.1 当 border-radius 半径值小于或等于 border 的宽度时，元素内部不具有圆角效果</h2>
+
+<p>当代码这样书写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 100px;</div><div class="line">    border: 10px solid rgba(0,0,0,.5);</div><div class="line">    border-radius: 10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<div style="width: 100px;
+            height: 100px;
+            border: 10px solid rgba(0,0,0,.5);
+            border-radius: 10px;"></div>
+
+<p><br>   </p>
+<p>如果将 <code>border-radius: 10px</code> 改为 <code>border-radius: 20px</code> 那么：</p>
+<div style="width: 100px;
+            height: 100px;
+            border: 10px solid rgba(0,0,0,.5);
+            border-radius: 20px;"><br></div>
+
+<p><br> </p>
+<p>这是因为 border-radius 内边半径 ＝ 外边半径－对应的边框宽度</p>
+<h2 style="color: #58a;">4.2 制作半圆</h2>
+
+<div style="width: 100px;
+            height: 50px;
+            border: 5px solid rgba(0,0,0,.5);
+            border-radius: 50px 50px 0 0;"></div>
+
+<p><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 50px;</div><div class="line">    border: 5px solid rgba(0,0,0,.5);</div><div class="line">    border-radius: 50px 50px 0 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<div style="width: 50px;
+            height: 100px;
+            border: 5px solid rgba(0,0,0,.5);
+            border-radius: 50px 0 0 50px;"></div>
+
+<p><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 50px;</div><div class="line">    border: 5px solid rgba(0,0,0,.5);</div><div class="line">    border-radius: 50px 0 0 50px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>制作半圆的技巧</p>
+<ul>
+<li>制作上／下半圆，元素的宽是高的2倍，圆角半径为元素的高度值</li>
+<li>制作左／右半圆，元素的高是宽的2倍，圆角半径是元素的宽度值</li>
+</ul>
+<h2 style="color: #58a;">4.3 制作扇形</h2>
+
+<div style="width: 100px;
+            height: 100px;
+            border: 5px solid rgba(0,0,0,.5);
+            border-radius: 0 100px 0 0;"></div>
+
+<p><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 100px;</div><div class="line">    border: 5px solid rgba(0,0,0,.5);</div><div class="line">    border-radius: 0 100px 0 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>遵循 “3同1不同” 原则，“三同” 指元素宽度、高度、圆角半径值相同，“一不同” 指圆角位置不同</p>
+<h2 style="color: #58a;">4.4 制作椭圆</h2>
+
+<div style="width: 100px;
+            height: 50px;
+            border: 5px solid rgba(0,0,0,.5);
+            border-radius: 50%;"></div>
+
+<p><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.box&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 50px;</div><div class="line">    border: 5px solid rgba(0,0,0,.5);</div><div class="line">    border-radius: 50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>制作椭圆的技巧：</p>
+<ul>
+<li>水平椭圆：元素宽度是高度的2倍，border-radius 的水平半径等＝元素宽度，垂直半径＝元素高度</li>
+<li>垂直椭圆：相反</li>
+</ul>
+<h2 style="color: #58a;">5. 使用 :not() 为导航添加间隔线</h2>
+
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fh4ruv7o13j30e100zaa1.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ul li:not(:last-child)&#123;</div><div class="line">    border-right: 1px solid;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 style="color: #58a;">6. 使用伪元素为列表项添加逗号分隔符</h2>
+
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fh4rvi49auj30c0010jrf.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ul li:not(:last-child)::after&#123;</div><div class="line">   content: &quot;,&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/07/01/CSS冷技巧/">
+    <time datetime="2017-07-01T07:32:31.000Z" class="entry-date">
+        2017-07-01
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2017/06/15/纯 css 实现点击切换轮播效果/" rel="next">纯 css 实现点击切换轮播效果 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/01/CSS冷技巧/">CSS冷技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/15/纯 css 实现点击切换轮播效果/">纯 css 实现点击切换轮播效果</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/01/纯-css-实现抽屉联动效果/">纯 css 实现抽屉联动效果</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/30/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
