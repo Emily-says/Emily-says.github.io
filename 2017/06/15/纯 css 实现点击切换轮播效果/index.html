@@ -26,11 +26,13 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fgxn4ypn8gj31400dw4qp.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fgxn9mkl0cj31400dwh9g.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fgxn8p48nej31400dw7lk.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fhmxb3blw9g30gn05q1kz.gif">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fgxlovyfzmj308c08c74l.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fgydua7lmnj31400dxqtm.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fgyecxsooyj31400jc4qp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fhmy1qy6gpg30gn08iqv8.gif">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fgyeljys3nj31400hr4qp.jpg">
-<meta property="og:updated_time" content="2017-06-26T02:57:51.000Z">
+<meta property="og:updated_time" content="2017-07-17T08:07:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="纯 css 实现点击切换轮播效果">
 <meta name="twitter:description" content="在网页效果中，若是想实现 点击切换图片 样式，在你的印象中是不是只能利用牛逼哄哄的 js 才能实现？这篇博客就将介绍一种 “半智能” 的点击切换效果 你可以从  这里  下载源代码">
@@ -89,7 +91,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/15/纯 css 实现点击切换轮播效果/" data-id="cj57spswp0003c7jjfgn1n44j" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/15/纯 css 实现点击切换轮播效果/" data-id="cj57vic46000325jjp86bnjrv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -104,6 +106,7 @@
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fgxn9mkl0cj31400dwh9g.jpg" alt="third"></p>
 <p>⬆️ <span style="color: #ccc"> 这个图有点失败，一股子淘宝爆款味儿 - -</span></p>
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fgxn8p48nej31400dw7lk.jpg" alt="forth"></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fhmxb3blw9g30gn05q1kz.gif" alt="动态效果图"></p>
 <p>首先来看看代码整体结构</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">    &lt;div class=&quot;cont&quot;&gt;</div><div class="line">        &lt;div class=&quot;imgs&quot;&gt;</div><div class="line">            ...</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=&quot;nav&quot;&gt;</div><div class="line">            ...</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>由 <code>main</code> 包含块包含了里面所有内容。<code>cont</code> 包含块包含了大图组 <code>imgs</code> 和小图组 <code>nav</code> 图片的排版布局方式就不多说了都是通过 <code>position</code> 定位的方式定在指定点</p>
@@ -122,6 +125,7 @@
 <p>介样一来就完成了整个效果，利用锚点实现点击切换。不过在前面我说过这只是一个 “半智能” 的效果，这是因为如果网页存在 <code>header</code> 并且这个 <code>banner</code> 后还有内容的话，那么在点击后，图片就会升到最顶端，导致用户想再使用 <code>header</code> 时的不友好体验 ⬇️</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fgyecxsooyj31400jc4qp.jpg" alt="想象效果"></p>
 <p>事实是 ⬇️</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fhmy1qy6gpg30gn08iqv8.gif" alt="现实效果"></p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fgyeljys3nj31400hr4qp.jpg" alt="现实效果"></p>
 <p>造成酱紫的原因就在于 <code>a</code> 标记的锚点会使页面返回到最 顶 部 🆙</p>
 <p>当然了我们在实际开发时肯定还是会选择 js 的方式，不过光论 demo 的话，这个效果不也是棒棒的么ヽ(•̀ω•́ )ゝ </p>
