@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="一个典型的针对移动端优化的页面会包含类似酱紫的内容：
+&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt;
+这玩意儿看起来眼熟不？这篇博将来茶话一下这个 name=&amp;quot;viewport&amp;quot; 中的 viewport —— 视口" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>茶话viewport | wonderland of code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一个典型的针对移动端优化的页面会包含类似酱紫的内容： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt; 这玩意儿看起来眼熟不？这篇博将来茶话一下这个 name=&amp;quot;viewp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="茶话viewport">
+<meta property="og:url" content="http://yoursite.com/2017/08/01/茶话viewport/index.html">
+<meta property="og:site_name" content="wonderland of code">
+<meta property="og:description" content="一个典型的针对移动端优化的页面会包含类似酱紫的内容： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt; 这玩意儿看起来眼熟不？这篇博将来茶话一下这个 name=&amp;quot;viewp">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhwhvo6wqzj30dt0aiai5.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhys99knhyj30i902l3yy.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhyspk51yuj30m80godt1.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhwi630d7vj30dw0ah10r.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fhw6r9t73dj30ci09twej.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1fhw6p15pkyj30rs0rsdk7.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fhwik9xrnnj30dk058mxy.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhw970u0omj313l0qgwh0.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fhwgyaynypj30lu07xq4o.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhut7havu1j30km0ap40m.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhyt7dkjrgj30m80jgdps.jpg">
+<meta property="og:updated_time" content="2017-08-03T09:06:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="茶话viewport">
+<meta name="twitter:description" content="一个典型的针对移动端优化的页面会包含类似酱紫的内容： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt; 这玩意儿看起来眼熟不？这篇博将来茶话一下这个 name=&amp;quot;viewp">
+<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhwhvo6wqzj30dt0aiai5.jpg">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="wonderland of code" rel="home">wonderland of code</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-茶话viewport" class="post-茶话viewport post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      茶话viewport
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/01/茶话viewport/" data-id="cj5w8iopt000a635hbg3t5lg3" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>一个典型的针对移动端优化的页面会包含类似酱紫的内容：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;
+</code></pre><p>这玩意儿看起来眼熟不？这篇博将来茶话一下这个 <code>name=&quot;viewport&quot;</code> 中的 <code>viewport</code> —— 视口</p>
+<a id="more"></a>
+<p>我们常说的 viewport <span style="color: #ccc;">也就是视口</span> 就是显示器显示页面内容的屏幕区域，其中涉及到以下几个概念</p>
+<ol>
+<li>layout viewport（布局视口）</li>
+<li>visual viewport（视觉视口）</li>
+<li>ideal viewport（理想视口）</li>
+<li>css 像素</li>
+<li>dip（device independent pixels）设备独立像素和 css 像素之间的关系</li>
+</ol>
+<!--more-->
+<h2 id="viewport-的概念"><a href="#viewport-的概念" class="headerlink" title="viewport 的概念"></a>viewport 的概念</h2><p>通俗的来说移动设备上的 viewport 就是设备的屏幕上能用来显示网页的那个区域，再具体点儿就是浏览器上或是 app 中的 webview 用来显示网页的那部分区域。</p>
+<p>但 viewport 又不局限于浏览器可视区域的大小，它可能比浏览器的可视区域要大或小。通常移动设备上的 viewport 都是要大于浏览器可视区域的，因为考虑到移动设备的分辨率相对于桌面电脑来说都比较小，所以为了能在移动设备上正常显示为桌面浏览器设计的网站，移动设备上的浏览器都会把自己默认的 viewport 设置为 980px 或者 1024px 或者其他。但带来的后果则是会出现横向滚动条。 </p>
+<h2 id="layout-viewport-布局视口"><a href="#layout-viewport-布局视口" class="headerlink" title="layout viewport 布局视口"></a>layout viewport 布局视口</h2><p>一般呢，移动设备的浏览器都默认设置了一个 viewport 定义了一个虚构的布局视口，用于解决早期页面在手机上的显示问题。 ios 和 android 基本都将介个视口分辨率设置为 980px，所以 pc 上的网页基本可以在手机上呈现，只是元素看上去会比较小，并可以手动缩放页面。</p>
+<p>移动设备上的浏览器认为自己必须能正常显示所有的网站，无论是不是为移动设备而设计的网站。但由于移动设备的屏幕都不是很宽，如果以浏览器的可视区域作为 viewport 的话，那些为桌面浏览器设计的网站放到移动设备上显示时，必然会因为移动设备的 viewport 太窄而挤作一团，甚至毁掉布局。</p>
+<p>也许你会想到：现在不是有很多手机分辨率都非常大吗？比如 768 <em> 1024，或者 1080 </em> 1920 这样，那这样的手机用来显示为桌面浏览器设计的网站是没问题的吧？</p>
+<p>在后面的内容我们会详细的看到 css 中的 1px 并不一定代表屏幕上的 1px，分辨率越大，css 中 1px 代表的物理像素就会越多，分辨率比的值也越大。这很好理解，你分辨率增大了，但屏幕尺寸并没有变大，就必须让 css 中的 1px 渲染（塞入）更多的物理像素，才能让 1px 的东西在屏幕上的大小与那些低分辨率的设备看起来差不多，不然就会因为太小而看不清。</p>
+<p>所以如果把移动设备上浏览器的可视区域设为 viewport 的话，某些网站（例如左右分区的网页）就会因为 viewport 太窄而显示错乱，所以这些浏览器就决定：默认情况下把 viewport 设为一个较宽的值，比如 980px。这样的话即使是那些为桌面设计的网站也能在移动浏览器上正常显示了。所以也把这个 <strong style="color: #faa;">浏览器默认的 viewport 叫做 layout viewport</strong> 。它的宽度可以通过 <code>document.documentElement.clientWidth</code> 来获取。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhwhvo6wqzj30dt0aiai5.jpg" alt="浏览器默认的viewport 叫做 layout viewport"></p>
+<h3 id="到底-layout-viewport-有多宽"><a href="#到底-layout-viewport-有多宽" class="headerlink" title="到底 layout viewport 有多宽"></a>到底 layout viewport 有多宽</h3><p>初始状态下</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhys99knhyj30i902l3yy.jpg" alt="初始状态下的 layout viewport"></p>
+<p>例如在谷歌下初始 layout viewport 的宽度是 980px，这时页面处于缩小的状态，通过 visual viewport 正好看到 layout viewport 中所有内容。或者说，在没有设置 <code>&lt;meta name=&quot;viewport&quot;&gt;</code> 的情况下 layout viewport 根据不同浏览器的特性有一个初始值。举个栗子：无论在 iPhone5 或在 iPad 下访问该页面，layout viewport 都是 980px 宽</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhyspk51yuj30m80godt1.jpg" alt="固定layout viewport980"></p>
+<h2 id="visual-viewport-视觉视口与-device-pixel-设备物理像素（分辨率）"><a href="#visual-viewport-视觉视口与-device-pixel-设备物理像素（分辨率）" class="headerlink" title="visual viewport 视觉视口与 device pixel 设备物理像素（分辨率）"></a>visual viewport 视觉视口与 device pixel 设备物理像素（分辨率）</h2><p>然而，layout viewport 的宽度是 &gt; 浏览器可视区域的宽度的，所以我们还需要一个 viewport 来代表<strong style="color:#faa;"> 浏览器可视区域的大小</strong>，这个 viewport 叫做 <strong style="color:#faa;">visual viewport</strong>。</p>
+<p>无论你是用桌面设备或是移动设备的浏览器去访问一个页面的时候，你所看到的浏览器窗口就是你的 visual viewport ，它的宽度可以通过<code>window.innerWidth</code> 来获取。对于一个移动设备来说就是你通过浏览器看到的那部分的大小，它的计量单位为 px，设备独立像素 dip 的那个 px。这个 visual        viewport 通常是可以变化的，比如你对屏幕进行缩放，就可以改变它的大小，或者移动屏幕的滚动条就可以改变 visual viewport 的位置。</p>
+<p><span style="color:#ccc;">视觉视口是物理屏幕的可视区域，屏幕显示器的物理像素。相同尺寸的屏幕像素密度大的设备，硬件像素会更多。</span></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhwi630d7vj30dw0ah10r.jpg" alt="浏览器可视区域的大小 visual viewport"></p>
+<h3 id="设备像素"><a href="#设备像素" class="headerlink" title="设备像素"></a>设备像素</h3><p>设备像素是物理概念，指的是设备中使用的物理像素，用 px 表示，它是一个“相对绝对单位”，即：</p>
+<ul>
+<li>在同一设备上每个设备像素所代表的物理长度是固定不变的（绝对性）</li>
+<li>但在不同设备之间每个设备像素所代表的物理长度是可以变化的（相对性）</li>
+</ul>
+<p>我们需要明白一个概念就是在我们手机上呈现的一条线、一个区块、一个图像都是由最小单位“像素”来表示的。这看起来就像是十字绣或是贴近电视看到的画面：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fhw6r9t73dj30ci09twej.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fhw6p15pkyj30rs0rsdk7.jpg" alt=""></p>
+<p>你也可以这样理解：物理像素或者说物理尺寸，就是我们现实生活中真实的计量单位、计量大小，1cm 它就是 1cm ，1m<sup>2</sup>就是1m<sup>2</sup>，不会因为你是仙女就少一点儿，更不会因为你是老爷们儿就多一点儿。</p>
+<p>那么物理像素也是一样，我们以 iphone5 || iphone5s || iphone 5se 为例，它的物理像素宽是 320*2 px，也就是说，<strong>iphone5 这个系列的屏幕横向上，真实存在640个像素点儿</strong> 或者说640个像素小格格。<span style="color: #ccc;">至于这个 320 是怎么回事我们一会再看</span></p>
+<h2 id="layout-viewport-与-visual-viewport-的区别与联系"><a href="#layout-viewport-与-visual-viewport-的区别与联系" class="headerlink" title="layout viewport 与 visual viewport 的区别与联系"></a>layout viewport 与 visual viewport 的区别与联系</h2><p>把 layout viewport 想像成为一张不会变更尺寸的大图。想像你有一个小一些的镂空框架（比如一个没放照片的相框），你通过这个框来看这张大图。类似于看望远镜 🔭 这个框架的周围被不透明的材料所环绕，于是掩盖了你所有的视线，只留这张大图的一部分给你。你<span style="color: #faa;">通过这个框架所能看到的大图的部分就是 visual viewport </span>。你可以拿远框架（缩小）来看整个图片，或者可以靠近一些（放大）只看局部。你也可以移动框架的位置、改变框架的方向，但是大图（layout viewport）的大小和形状永远不会变。</p>
+<p>当进行页面放大时，你可以想象你拿着这个框架离这张大图越来越近了，那么你所看到的大图的内容也越来越少了。原本在未缩放的页面上看起来很小的尺寸，现在看上去变大了，事实上这部分的设备独立像素（ css 的 px 值）并没有变化，仅仅是因为进行放大后，css 的 1px 的值所占的屏幕分辨率的值变大了。</p>
+<p>同理，当你缩小整个页面的时候，看到大图的内容也越来越多，同时，原本看起来很大的尺寸，现在看上去的时候又变小了。同理，css 的独立像素 1px 的值并没有发生变化,但是 1px 值所占的屏幕分辨率的值变小了。</p>
+<p>在放大和缩小的过程中，visual viewport 和 layout viewport 的宽、高都没发生任何的变化，变化的仅仅就像是用户拿着这个 visual viewport 去远离或者靠近 layout viewport，在远离或者靠近的过程中，就会呈现出缩放的效果来。</p>
+<h2 id="ideal-viewport-理想视口与-device-independent-pixels（dip）-设备独立像素"><a href="#ideal-viewport-理想视口与-device-independent-pixels（dip）-设备独立像素" class="headerlink" title="ideal viewport 理想视口与 device independent pixels（dip） 设备独立像素"></a>ideal viewport 理想视口与 device independent pixels（dip） 设备独立像素</h2><p>上面已经介绍了两种 viewport 了：layout viewport 和 visual viewport。但浏览器觉得还不够，因为现在越来越多的网站都会为移动设备进行单独的设计，所以必须还要有一个能完美适配移动设备的 viewport。</p>
+<p>所谓的完美适配指的是</p>
+<ol>
+<li>不需要用户缩放和横向滚动条就能正常的查看网站的所有内容</li>
+<li>显示的文字的大小合适。比如一段 14px 的文字不会因为在一个高密度像素的屏幕里显示得太小而无法看清，理想的情况是这段14px的文字无论是在何种密度屏幕、何种分辨率下都能显示出来尺寸差异小。当然，不只是文字，其他元素像图片什么的也是这个道理。</li>
+</ol>
+<p>这个 viewport 就被叫做<strong style="color:#faa;"> ideal viewport —— 移动设备的理想视口</strong>。</p>
+<p>ideal viewport 并没有一个固定的尺寸，不同的设备拥有不同的 ideal viewport。以 iPhone 来说，所有的非 plus 系列的 iPhone 的 ideal viewport 宽度都是 320px，也就是说，在非 plus 系列的 iPhone 中，css 中的 320px 就代表 iPhone 屏幕的理想宽度。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fhwik9xrnnj30dk058mxy.jpg" alt="理想视口ideal viewport"></p>
+<p><span style="color:#ccc">安卓设备就比较复杂了，有320px的，有360px的，有384px的等等</span></p>
+<p>移动设备上的 viewport 分为 layout viewport、 visual viewport 和 ideal viewport  三类，其中 ideal viewport 是最适合移动设备的 viewport，它宽度 = 移动设备的屏幕宽度，只要在 css 中把某一元素的宽度设为 ideal viewport 的宽度(单位用px)，那么这个元素的宽度就是设备屏幕的宽度了，也就是宽度为100%的效果。ideal viewport 的意义在于，无论在何种分辨率的屏幕下，那些针对 ideal viewport 而设计的网站，不需要用户手动缩放，也不需要出现横向滚动条，都可以完美的呈现给用户。</p>
+<h3 id="dip"><a href="#dip" class="headerlink" title="dip"></a>dip</h3><p>dip 设备独立像素是跟设备的硬件像素（物理像素）无关的，一个 dip 在任意像素密度的设备屏幕上都占据相同的空间。</p>
+<p>设备的独立像素宽 与 物理像素宽（或者说像素分辨率）的关系可以满足酱紫的公式： 物理像素宽度 = 独立像素宽度 * 倍率 </p>
+<p><b>所以上例 <q>320 <em> 2</em></q> 中的 320 就是独立像素宽度，作为 Retina 屏倍率为2，所以物理像素宽度就是 320  2 = 640px </b></p>
+<p>但移动端手机屏幕通常来说是不可以设置分辨率的，都是由设备厂家默认设置的宽度值。也就是说 dip 值就是 ideal viewport 的值，我们拿 iPhone 的屏幕分辨率来举个栗子：</p>
+<ul>
+<li>iPhone 5 系列（iPhone 5s || iphone 5 se ）的分辨率 320 <em> 568，物理像素 640 </em> 1136 <ul>
+<li>也就是说 iPhone 5 系列的手机屏幕上，横向上真实存在 640 个像素点，纵向上有 1136 个像素点，所以它们之间的设备像素比就是 640 / 320 &amp;&amp; 1136 / 568 比值为2</li>
+</ul>
+</li>
+<li>iPhone 6 系列的分辨率 375 <em> 667，物理像素 750 </em> 1334 设备像素比同样也是 2</li>
+<li>但需要注意的是 plus 系列，plus 的分辨率是 414 <em> 736 ，物理像素 1242 </em> 2208 ，设备像素比就不是 2 了，是 3 倍。但图像从渲染的 1242 <em> 2208 缩小至 1080 </em> 1920。缩小比例为 1080／1242 = 1920／2208 = 20／23 这就意味着从原始渲染中每23个像素必须映射到20个物理像素。换句话来说也就是图像缩小到原始大小的约87%</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhw970u0omj313l0qgwh0.jpg" alt="缩小"></p>
+<pre><code>* 你可以从 [这里](https://www.paintcodeapp.com/news/iphone-6-screens-demystified) 查看到 plus 系列的实际显示图像等比降低至 1080 * 1920 的原因
+</code></pre><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fhwgyaynypj30lu07xq4o.jpg" alt="iPhone尺寸规格"></p>
+<p>你还可以从 <a href="http://viewportsizes.com" target="_blank" rel="external">这里http://viewportsizes.com</a> 查询到更多设备的 ideal veiwport</p>
+<h2 id="css-像素"><a href="#css-像素" class="headerlink" title="css 像素"></a>css 像素</h2><p>首先我们需要明确一个点那就是 <strong>css 中的 1px 并不一定就等于设备的 1px</strong></p>
+<p>px 是用于 webpage 页面布局的单位，在桌面浏览器中 css 的1个像素往往是对应着电脑屏幕的1个物理像素，这可能就会给我们造成一个错觉就是 css 中的像素就是设备的物理像素。但事实并非如此，我们前面提到 css 中的像素值是一个抽象单位，在不同的设备或环境中，css 中的 1px 所代表的设备物理像素是不同的。</p>
+<p>在早先的移动设备中屏幕像素密度都比较低，比如 iPhone3GS 它的分辨率是 320 <em> 480，1个 css 像素确实是等于1个物理像素哒，后来随着技术的发展，移动设备的屏幕像素密度越来越高，从 iPhone4 开始苹果公司就出了所谓的 Retina 屏分辨率提高了整一倍，也就是 640 </em> 960 </p>
+<p>屏幕尺寸没有变化像素却多了一倍，这时，1个 css 像素就等于2个物理像素。其他品牌的移动设备也是这个道理。1个 css 像素相当于多少个物理像素，也因设备的不同而不同，比率五花八门没有一个定论。</p>
+<p><span style="color:#ccc">根据上述设备像素与CSS像素之间的关系、及DPR的官方定义，我们可以推断出：CSS像素 = 设备独立像素（逻辑像素）</span></p>
+<h2 id="使用-meta-标记控制-viewport"><a href="#使用-meta-标记控制-viewport" class="headerlink" title="使用 meta 标记控制 viewport"></a>使用 meta 标记控制 viewport</h2><p>还是最头上那行代码：<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</code> 移动设备默认的 viewport 是 layout viewport 也就是比屏幕要宽的那个。但在进行移动页面开发时我们需要的却是 ideal viewport 所以会使用到这行代码。</p>
+<p><strong style="color: #faa;">要得到 ideal viewport 就必须把默认的 layout viewport 宽度设置为移动设备的屏幕宽度</strong> 因为其中的 <code>width</code> 能控制 layout viewport 的宽度，所以把 width 设置为 <code>device-width</code></p>
+<p>这行代码的作用是让当前的 layout viewport 宽度 = 设备宽度，不允许用户手动缩放，<span style="color:#ccc;">当然不同的网站有不同的需求你也可以允许手动缩放</span> 但让 layout viewport 宽度 = 设备宽度这是大家都想要的效果。如果不酱紫设定的话就会默认为了比屏幕宽的 layout viewport 也就是说会有横向滚动条的粗现～</p>
+<p>meta viewport 标记首先是由苹果公司在 safari 浏览器中引入的，就是解决移动设备的显示问题，后来各大浏览器厂商也在效仿。这里罗列了每个属性的详细介绍</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhut7havu1j30km0ap40m.jpg" alt="viewpoet属性介绍"></p>
+<h3 id="width"><a href="#width" class="headerlink" title="width"></a>width</h3><p>width 属性被用来控制 layout viewpoet 布局视口的宽度，默认值是由设备厂家指定的，基本都会将这个视口分辨率定为 980px ，你可以设置类似 <code>width=320</code> 酱紫确切的像素值，但为了自适应布局通常的做法是设置为 <code>device-width</code> </p>
+<h4 id="接着上面-“到底-layout-viewport-有多宽”-的栗子"><a href="#接着上面-“到底-layout-viewport-有多宽”-的栗子" class="headerlink" title="接着上面 “到底 layout viewport 有多宽” 的栗子"></a>接着上面 “到底 layout viewport 有多宽” 的栗子</h4><p><span style="color:#ccc;">在上面（很上面 - - ）的栗子中我们看到了当没有设置 <code>&lt;meta name=&quot;viewport&quot;&gt;</code> 的情况下谷歌会将页面 layout viewport 设置为 980px 酱紫的初始值</span> 那么在声明了的情况下呢？ <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=300&quot;&gt;</code></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhyt7dkjrgj30m80jgdps.jpg" alt="content width 300"></p>
+<p>这里可以看出：无论宽度是 320 的 iPhone5 或是宽度为 768 的 iPad layout viewport 初始宽度就是 300px，也适应于 visual viewport 。换句话说，通过 visual viewport 可以看到 layout viewport 里所有的内容，并且没有横向滚动条。当然了，width 的值设置为其他值也是如此。</p>
+<p>当对手机屏幕翻转时</p>
+<ul>
+<li>如果 visual viewport 宽度 &gt; layout viewport 宽度，那么 viewport 需要 zoom in (放大) 以适应 visual viewport 宽度</li>
+<li><ul>
+<li>如果 visual viewport 宽度 &lt; layout viewport 宽度，那么 viewport 需要 zoom out (缩小) 以适应 visual viewport 宽度</li>
+</ul>
+</li>
+</ul>
+<p>所以设置 <code>device-width</code> 会将手机横向物理像素 / 转化系统 <a href="http://tgideas.qq.com/webplat/info/news_version3/804/7104/7106/m5723/201509/376281.shtml" target="_blank" rel="external">点击这里看换算</a> 作为其值，重制相应的 layout viewport 值适应 visual viewport。此时无论手机是否翻转，visual viewport 都会 = layout viewport 的值。而不出现缩放的情况。</p>
+<h3 id="height"><a href="#height" class="headerlink" title="height"></a>height</h3><p>并不常用 ( ꒪⌓꒪)</p>
+<h3 id="initial-scale"><a href="#initial-scale" class="headerlink" title="initial-scale"></a>initial-scale</h3><p>用于指定页面的初始缩放比例。<code>initial-scale=1</code> 表示将布局视口宽度设置为理想视口的宽度，其实作用同于 <code>width=device-width</code> </p>
+<p>那为啥会有相同的结果呢？首先需要知道这个“缩放”是相当于啥来缩放的，因为这里的缩放值是1，也就是不缩放，也就是说，缩放是相对于 ideal viewport 来进行缩放的，当对 ideal viewport 进行 100% 缩放（也就是1）时，不就是 ideal viewport 了么。</p>
+<p> <code>initial-scale=1.5</code> 就表示布局视口的宽度设置为理想视口的宽度的 1.5 倍</p>
+<h4 id="如果-width-和-initial-scale-1-同时出现"><a href="#如果-width-和-initial-scale-1-同时出现" class="headerlink" title="如果 width 和 initial-scale = 1 同时出现"></a>如果 width 和 initial-scale = 1 同时出现</h4><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=400, initial-scale=1&quot;&gt;</code> 如果出现了酱紫的写法，width=400 表示把当前 viewport 的宽度设为 400px，initial-scale=1 则表示把当前 viewport 的宽度设为 ideal viewport 的宽度，那么浏览器会取它们两个中较大的那个值。例如</p>
+<ul>
+<li>当 width=400，ideal viewport 的宽度为320时，取的是 layout viewport 的400</li>
+<li>当 width=400，ideal viewport的宽度为480时，取的是 ideal viewport 的480</li>
+</ul>
+<p>要把当前的 viewport 宽度设为 ideal viewport 的宽度，既可以设置 <code>width=device-width</code>，也可以设置 <code>initial-scale=1</code>，但这两者各有一个小缺陷，就是iphone、ipad 以及 IE 会横竖屏不分，都以竖屏的 ideal viewport 宽度为准。所以，最完美的写法应该是<strong style="color:#faa">两者都写上去</strong>，这样就 initial-scale=1 解决了 iphone、ipad的毛病，width=device-width 则解决了 IE 的毛病。</p>
+<h3 id="maximum-scale-与-minimun-scale"><a href="#maximum-scale-与-minimun-scale" class="headerlink" title="maximum-scale 与 minimun-scale"></a>maximum-scale 与 minimun-scale</h3><p><code>maximum-scale</code> 用于指定用户能放大的最大比例，假设设置为 <code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=3&quot; /&gt;</code> 那么用户最终能将页面最大到这个初始页面的3倍大小。</p>
+<p><code>minimum-scale</code> 类似 <code>maximum-scale</code> 不过它是用来制定页面缩小比例的，通常不会去定义该属性的值，页面如果太小，那么对于用户来说就将难以阅读。</p>
+<h3 id="user-scalable"><a href="#user-scalable" class="headerlink" title="user-scalable"></a>user-scalable</h3><p>这个属性用来控制用户是否可以通过手势对页面进行缩放。默认值为 yes 即可以被缩放，通常会将其设置为 no 不允许用户缩放页面。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>在做移动页面开发时如果不设置 meta viewport 标签，那么移动设备上浏览器默认的宽度值为 800px、980px、1024px 等，总之是大于屏幕宽度的。这里的宽度所用的 px 都是指 css 独立像素中的 px，不是屏幕物理像素的 px。</p>
+<p>每个移动设备浏览器中都有一个理想的宽度（css 中的宽度，非物理宽度），在 css 中这个宽度就相当于 100% 所代表的那个宽度。我们可以用 meta 标签把 viewport 的宽度设为那个理想的宽度，如果不确定这个设备的理想宽度是多少，那么用<code>device-width</code> 就好。同时 <code>initial-scale=1</code> 也有把 viewport 的宽度设为理想宽度的作用。所以，我们可以使用<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code> 来得到一个 ideal viewport。</p>
+<p>为什么需要有理想的 viewport 呢？比如一个分辨率为 320 <em> 480 的手机，理想 viewport 的宽度当然是320px，而另一个屏幕尺寸相同但分辨率为 640 </em> 960 的手机的理想 viewport 宽度也是为320px，那为什么分辨率大的这个手机的理想宽度要 = 分辨率小的那个手机的理想宽度呢？这是因为只有这样才能保证同样的页面在不同分辨率的设备上看起来都是一样或差不多的。</p>
+<p>实际上，现在市面上虽有各种种类不同、品牌不同、分辨率不同的手机，但它们的 ideal viewport 宽度归纳起来无非也就 320、360、384、400等几种，都是非常接近的，理想宽度的相近也就意味着我们针对某个设备的 ideal viewport 而做出的页面在其他设备上的表现也不会相差非常多甚至是表现一样哒！</p>
+<p>推荐阅读： <a href="https://www.quirksmode.org/mobile/viewports.html" target="_blank" rel="external">ppk第一篇</a>，<a href="https://www.quirksmode.org/mobile/viewports2.html" target="_blank" rel="external">ppk第二篇</a>，<a href="https://www.quirksmode.org/mobile/metaviewport" target="_blank" rel="external">ppk第三篇</a>，<a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="external">参考阅读移动前端开发之 viewport 的深入理解</a>，<a href="https://segmentfault.com/a/1190000006068808" target="_blank" rel="external">visual viewport 和 layout viewport</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/08/01/茶话viewport/">
+    <time datetime="2017-08-01T01:49:46.000Z" class="entry-date">
+        2017-08-01
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2017/07/14/你能用 css 为导航做的效果/" rel="next">你能用css为导航添加的效果 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/01/茶话viewport/">茶话viewport</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/14/你能用 css 为导航做的效果/">你能用css为导航添加的效果</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/01/CSS冷技巧/">CSS冷技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/15/纯 css 实现点击切换轮播效果/">纯 css 实现点击切换轮播效果</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/01/纯-css-实现抽屉联动效果/">纯 css 实现抽屉联动效果</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
