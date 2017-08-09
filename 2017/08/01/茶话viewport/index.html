@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fhwgyaynypj30lu07xq4o.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhut7havu1j30km0ap40m.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fhyt7dkjrgj30m80jgdps.jpg">
-<meta property="og:updated_time" content="2017-08-03T09:06:32.000Z">
+<meta property="og:updated_time" content="2017-08-09T08:07:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="茶话viewport">
 <meta name="twitter:description" content="一个典型的针对移动端优化的页面会包含类似酱紫的内容： &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;quot;&amp;gt; 这玩意儿看起来眼熟不？这篇博将来茶话一下这个 name=&amp;quot;viewp">
@@ -93,15 +93,15 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/01/茶话viewport/" data-id="cj5w8iopt000a635hbg3t5lg3" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/01/茶话viewport/" data-id="cj64qher00004xz5h6yhdb8xl" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
         <p>一个典型的针对移动端优化的页面会包含类似酱紫的内容：</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;
-</code></pre><p>这玩意儿看起来眼熟不？这篇博将来茶话一下这个 <code>name=&quot;viewport&quot;</code> 中的 <code>viewport</code> —— 视口</p>
+<p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</code></p>
+<p>这玩意儿看起来眼熟不？这篇博将来茶话一下这个 <code>name=&quot;viewport&quot;</code> 中的 <code>viewport</code> —— 视口</p>
 <a id="more"></a>
 <p>我们常说的 viewport <span style="color: #ccc;">也就是视口</span> 就是显示器显示页面内容的屏幕区域，其中涉及到以下几个概念</p>
 <ol>
@@ -158,20 +158,20 @@
 <p><b>所以上例 <q>320 <em> 2</em></q> 中的 320 就是独立像素宽度，作为 Retina 屏倍率为2，所以物理像素宽度就是 320  2 = 640px </b></p>
 <p>但移动端手机屏幕通常来说是不可以设置分辨率的，都是由设备厂家默认设置的宽度值。也就是说 dip 值就是 ideal viewport 的值，我们拿 iPhone 的屏幕分辨率来举个栗子：</p>
 <ul>
-<li>iPhone 5 系列（iPhone 5s || iphone 5 se ）的分辨率 320 <em> 568，物理像素 640 </em> 1136 <ul>
+<li>iPhone 5 系列（iPhone 5s || iphone 5 se ）的分辨率 320x568，物理像素 640x1136 <ul>
 <li>也就是说 iPhone 5 系列的手机屏幕上，横向上真实存在 640 个像素点，纵向上有 1136 个像素点，所以它们之间的设备像素比就是 640 / 320 &amp;&amp; 1136 / 568 比值为2</li>
 </ul>
 </li>
-<li>iPhone 6 系列的分辨率 375 <em> 667，物理像素 750 </em> 1334 设备像素比同样也是 2</li>
-<li>但需要注意的是 plus 系列，plus 的分辨率是 414 <em> 736 ，物理像素 1242 </em> 2208 ，设备像素比就不是 2 了，是 3 倍。但图像从渲染的 1242 <em> 2208 缩小至 1080 </em> 1920。缩小比例为 1080／1242 = 1920／2208 = 20／23 这就意味着从原始渲染中每23个像素必须映射到20个物理像素。换句话来说也就是图像缩小到原始大小的约87%</li>
+<li>iPhone 6 系列的分辨率 375x667，物理像素 750x1334 设备像素比同样也是 2</li>
+<li>但需要注意的是 plus 系列，plus 的分辨率是 414x736 ，物理像素 1242x2208 ，设备像素比就不是 2 了，是 3 倍。但图像从渲染的 1242x2208 缩小至 1080x1920。缩小比例为 1080／1242 = 1920／2208 = 20／23 这就意味着从原始渲染中每23个像素必须映射到20个物理像素。换句话来说也就是图像缩小到原始大小的约87%</li>
 </ul>
 <p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fhw970u0omj313l0qgwh0.jpg" alt="缩小"></p>
-<pre><code>* 你可以从 [这里](https://www.paintcodeapp.com/news/iphone-6-screens-demystified) 查看到 plus 系列的实际显示图像等比降低至 1080 * 1920 的原因
-</code></pre><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fhwgyaynypj30lu07xq4o.jpg" alt="iPhone尺寸规格"></p>
+<p>你可以从 <a href="https://www.paintcodeapp.com/news/iphone-6-screens-demystified" target="_blank" rel="external">这里</a> 查看到 plus 系列的实际显示图像等比降低至 1080 * 1920 的原因</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fhwgyaynypj30lu07xq4o.jpg" alt="iPhone尺寸规格"></p>
 <p>你还可以从 <a href="http://viewportsizes.com" target="_blank" rel="external">这里http://viewportsizes.com</a> 查询到更多设备的 ideal veiwport</p>
 <h2 id="css-像素"><a href="#css-像素" class="headerlink" title="css 像素"></a>css 像素</h2><p>首先我们需要明确一个点那就是 <strong>css 中的 1px 并不一定就等于设备的 1px</strong></p>
 <p>px 是用于 webpage 页面布局的单位，在桌面浏览器中 css 的1个像素往往是对应着电脑屏幕的1个物理像素，这可能就会给我们造成一个错觉就是 css 中的像素就是设备的物理像素。但事实并非如此，我们前面提到 css 中的像素值是一个抽象单位，在不同的设备或环境中，css 中的 1px 所代表的设备物理像素是不同的。</p>
-<p>在早先的移动设备中屏幕像素密度都比较低，比如 iPhone3GS 它的分辨率是 320 <em> 480，1个 css 像素确实是等于1个物理像素哒，后来随着技术的发展，移动设备的屏幕像素密度越来越高，从 iPhone4 开始苹果公司就出了所谓的 Retina 屏分辨率提高了整一倍，也就是 640 </em> 960 </p>
+<p>在早先的移动设备中屏幕像素密度都比较低，比如 iPhone3GS 它的分辨率是 320x480，1个 css 像素确实是等于1个物理像素哒，后来随着技术的发展，移动设备的屏幕像素密度越来越高，从 iPhone4 开始苹果公司就出了所谓的 Retina 屏分辨率提高了整一倍，也就是 640x960 </p>
 <p>屏幕尺寸没有变化像素却多了一倍，这时，1个 css 像素就等于2个物理像素。其他品牌的移动设备也是这个道理。1个 css 像素相当于多少个物理像素，也因设备的不同而不同，比率五花八门没有一个定论。</p>
 <p><span style="color:#ccc">根据上述设备像素与CSS像素之间的关系、及DPR的官方定义，我们可以推断出：CSS像素 = 设备独立像素（逻辑像素）</span></p>
 <h2 id="使用-meta-标记控制-viewport"><a href="#使用-meta-标记控制-viewport" class="headerlink" title="使用 meta 标记控制 viewport"></a>使用 meta 标记控制 viewport</h2><p>还是最头上那行代码：<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</code> 移动设备默认的 viewport 是 layout viewport 也就是比屏幕要宽的那个。但在进行移动页面开发时我们需要的却是 ideal viewport 所以会使用到这行代码。</p>
@@ -207,7 +207,7 @@
 <h3 id="user-scalable"><a href="#user-scalable" class="headerlink" title="user-scalable"></a>user-scalable</h3><p>这个属性用来控制用户是否可以通过手势对页面进行缩放。默认值为 yes 即可以被缩放，通常会将其设置为 no 不允许用户缩放页面。</p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>在做移动页面开发时如果不设置 meta viewport 标签，那么移动设备上浏览器默认的宽度值为 800px、980px、1024px 等，总之是大于屏幕宽度的。这里的宽度所用的 px 都是指 css 独立像素中的 px，不是屏幕物理像素的 px。</p>
 <p>每个移动设备浏览器中都有一个理想的宽度（css 中的宽度，非物理宽度），在 css 中这个宽度就相当于 100% 所代表的那个宽度。我们可以用 meta 标签把 viewport 的宽度设为那个理想的宽度，如果不确定这个设备的理想宽度是多少，那么用<code>device-width</code> 就好。同时 <code>initial-scale=1</code> 也有把 viewport 的宽度设为理想宽度的作用。所以，我们可以使用<br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code> 来得到一个 ideal viewport。</p>
-<p>为什么需要有理想的 viewport 呢？比如一个分辨率为 320 <em> 480 的手机，理想 viewport 的宽度当然是320px，而另一个屏幕尺寸相同但分辨率为 640 </em> 960 的手机的理想 viewport 宽度也是为320px，那为什么分辨率大的这个手机的理想宽度要 = 分辨率小的那个手机的理想宽度呢？这是因为只有这样才能保证同样的页面在不同分辨率的设备上看起来都是一样或差不多的。</p>
+<p>为什么需要有理想的 viewport 呢？比如一个分辨率为 320x480 的手机，理想 viewport 的宽度当然是320px，而另一个屏幕尺寸相同但分辨率为 640x960 的手机的理想 viewport 宽度也是为320px，那为什么分辨率大的这个手机的理想宽度要 = 分辨率小的那个手机的理想宽度呢？这是因为只有这样才能保证同样的页面在不同分辨率的设备上看起来都是一样或差不多的。</p>
 <p>实际上，现在市面上虽有各种种类不同、品牌不同、分辨率不同的手机，但它们的 ideal viewport 宽度归纳起来无非也就 320、360、384、400等几种，都是非常接近的，理想宽度的相近也就意味着我们针对某个设备的 ideal viewport 而做出的页面在其他设备上的表现也不会相差非常多甚至是表现一样哒！</p>
 <p>推荐阅读： <a href="https://www.quirksmode.org/mobile/viewports.html" target="_blank" rel="external">ppk第一篇</a>，<a href="https://www.quirksmode.org/mobile/viewports2.html" target="_blank" rel="external">ppk第二篇</a>，<a href="https://www.quirksmode.org/mobile/metaviewport" target="_blank" rel="external">ppk第三篇</a>，<a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="external">参考阅读移动前端开发之 viewport 的深入理解</a>，<a href="https://segmentfault.com/a/1190000006068808" target="_blank" rel="external">visual viewport 和 layout viewport</a></p>
 
