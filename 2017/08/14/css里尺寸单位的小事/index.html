@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="在书写样式表时都会与单位关联，例如 .container{width: 100px;} 或者是 .left{width: 50%;} 似乎常用到的单位也就那么两个，而实际上 css 中的可用单位的数量还包含了其他。除去绝对单位和常用的 px 、 % ，这篇博还将介绍几种你也许从没用过或见过的计量单位。可以通过 caniuse 这个网站查看其兼容性。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>css里尺寸单位的小事 | wonderland of code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在书写样式表时都会与单位关联，例如 .container{width: 100px;} 或者是 .left{width: 50%;} 似乎常用到的单位也就那么两个，而实际上 css 中的可用单位的数量还包含了其他。除去绝对单位和常用的 px 、 % ，这篇博还将介绍几种你也许从没用过或见过的计量单位。可以通过 caniuse 这个网站查看其兼容性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css里尺寸单位的小事">
+<meta property="og:url" content="http://yoursite.com/2017/08/14/css里尺寸单位的小事/index.html">
+<meta property="og:site_name" content="wonderland of code">
+<meta property="og:description" content="在书写样式表时都会与单位关联，例如 .container{width: 100px;} 或者是 .left{width: 50%;} 似乎常用到的单位也就那么两个，而实际上 css 中的可用单位的数量还包含了其他。除去绝对单位和常用的 px 、 % ，这篇博还将介绍几种你也许从没用过或见过的计量单位。可以通过 caniuse 这个网站查看其兼容性。">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fiba9vi1lsj30dw07tmz6.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fiehb2qcwhj312w15owry.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fiejy96zmdj312w15ogyp.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fiek5e0izgj312w15oan7.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fij7xbmc62j30go0hhq2t.jpg">
+<meta property="og:updated_time" content="2017-08-14T06:21:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css里尺寸单位的小事">
+<meta name="twitter:description" content="在书写样式表时都会与单位关联，例如 .container{width: 100px;} 或者是 .left{width: 50%;} 似乎常用到的单位也就那么两个，而实际上 css 中的可用单位的数量还包含了其他。除去绝对单位和常用的 px 、 % ，这篇博还将介绍几种你也许从没用过或见过的计量单位。可以通过 caniuse 这个网站查看其兼容性。">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fiba9vi1lsj30dw07tmz6.jpg">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="wonderland of code" rel="home">wonderland of code</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-css里尺寸单位的小事" class="post-css里尺寸单位的小事 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      css里尺寸单位的小事
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/14/css里尺寸单位的小事/" data-id="cj6brx5jy0004kv5hbw31ieki" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>在书写样式表时都会与单位关联，例如 <code>.container{width: 100px;}</code> 或者是 <code>.left{width: 50%;}</code> 似乎常用到的单位也就那么两个，而实际上 css 中的可用单位的数量还包含了其他。除去绝对单位和常用的 px 、 % ，这篇博还将介绍几种你也许从没用过或见过的计量单位。可以通过 <a href="http://caniuse.com/" target="_blank" rel="external">caniuse</a> 这个网站查看其兼容性。</p>
+<a id="more"></a>
+<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><p>首先来看看 em 这个单位，浏览器默认渲染的文字大小是 16px ，当然了，我说的是在没有经过人为更改过设置的情况下。em 是一个相对大小，值可以设置为 <code>1em</code> <code>1.5em</code> <code>0.5em</code> 等，还可以指定到小数点后3位。而其中“相对”的意思是指：</p>
+<blockquote>
+<p>相对计算必然有个参考物，这里相对所指的是相对于父元素计算后的 <code>font-size</code> px 值。</p>
+</blockquote>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fiba9vi1lsj30dw07tmz6.jpg" alt="举个栗子"></p>
+<p>有酱紫的一个结构和样式：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p,span&#123;</div><div class="line">    font-size: 2em;</div><div class="line">&#125;</div><div class="line">&lt;p&gt; say &lt;span&gt;something&lt;/span&gt; &lt;/p&gt;</div></pre></td></tr></table></figure>
+<p style="font-size: 32px;"> say <span style="font-size: 64px;">something</span> </p>
+
+<p>会看到如上 👆 的效果：p 标记 font-size 32px， span 标记 font-size 64px</p>
+<p>上面的栗子中</p>
+<ul>
+<li>p 元素在计算大小时默认 1em = 16px ，那么最终执行出 font-size 为 16 * 2 = 32px </li>
+<li>span 元素则继承到父级 1em = 32px 的大小，再乘以2，得到 64px</li>
+</ul>
+<p>再来看这样的代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">.box1&#123;</div><div class="line">    font-size: 2em;</div><div class="line">    width: 2em;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div><div class="line">.box1-1&#123;</div><div class="line">    font-size: 2em;</div><div class="line">    width: 2em;</div><div class="line">    background-color: yellow;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;div class="box1"&gt;1</div><div class="line">    &lt;div class="box1-1"&gt;1-1&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fiehb2qcwhj312w15owry.jpg" alt="box1"></p>
+<ul>
+<li>注意观察调试器右下角，父级容器 box1 font-size 值 16 * 2 毋庸置疑 32px 了，width 在现有 1em = 32px 的基础上，乘以 2 得到 64px</li>
+<li>子级 box1-1 font-size 值从父级处继承 1em = 32px， 32 * 2 = 64px 这个也是意料之中了吧。 那么 width 值呢？</li>
+<li>此时 box1-1 的 font-size 已经为 1em = 64px，所以 width 的值就应该是当前 font-size 1em = 64px 再乘以 2 了</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.box2&#123;</div><div class="line">    font-size: 2em;</div><div class="line">    width: 2em;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div><div class="line">.box2-1&#123;</div><div class="line">    font-size: 2em;</div><div class="line">    width: 2em;</div><div class="line">    background-color: yellow;</div><div class="line">&#125;</div><div class="line">#box2-1&#123;</div><div class="line">    font-size: 20px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;div class="box2"&gt;2</div><div class="line">    &lt;div class="box2-1" id="box2-1"&gt;2-1&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fiejy96zmdj312w15ogyp.jpg" alt="box2"></p>
+<ul>
+<li>父级容器 box2 的 font-size 值为 32px ,width 值 64px 也是意料之中的了，那 box2-1 呢？</li>
+<li>box2-1 本身应该继承 box2 的 font-size，但 box2-1 重新声明了 font-size 的值，所以此时 box2-1 的值从 1em = 32px 被重新定义为了 1em = 20px，所以此时 1em = 20px，所以 width 值为 20 * 2 = 40px</li>
+</ul>
+<h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><p>有时你或许想基于一个唯一的度量标准来按比例缩放，那就一定少不了 rem 。用上面的示例将单位换成 rem 试试呢？</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fiek5e0izgj312w15oan7.jpg" alt="rem示例截图"></p>
+<p>可以看到父子级的 font-size 和 width 值都相同，都是 32px，不会通过父级关系层层继承、层层翻倍。那么这个 rem 究竟是以谁的 font-size 为基准的呢？</p>
+<p>首先需要明白的一点在于，rem 中的这个 “ r “ 指的是 <code>root</code> 也就是根元素 <code>html</code> ，酱紫一来就解释得通了，只需要更改 html 的 font-size 值，其他元素的值就基于它改变了。</p>
+<h2 id="vw-和-vh"><a href="#vw-和-vh" class="headerlink" title="vw 和 vh"></a>vw 和 vh</h2><p>有时你想要使用显示窗口的宽度或者高度，而不使用父级的宽度，该如何设置呢？这时 <code>vw</code> 和 <code>vh</code> 就闪亮登场了。</p>
+<p>1vw 等于 viewport 宽度的 1%， 1vh 等于 viewport 高度的 1% 。也就是 <code>window.innerWidth</code> 与 <code>window.innerHeight</code> 的大小。</p>
+<p>比如说一款浏览器的宽度是 750px，那么 1vw 的值就是 7.5px，同理，如果一款浏览器高度是 900px ，那么 1vh 就能得到 9px</p>
+<p>那么我们就可以利用这个单位实现占满高度的图片轮播</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.banner</span>&#123;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100vh</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="vmin-和-vmax"><a href="#vmin-和-vmax" class="headerlink" title="vmin 和 vmax"></a>vmin 和 vmax</h2><p>vh 和 vw 总是与视口的宽高有关的，与之不同的 <code>vmin</code> 和 <code>vmax</code> 是与宽高的最大值或最小值有关的，取决于哪一个更大或更小。</p>
+<p>比如说当前浏览器 <code>width=1000px</code>，<code>height=500px</code>，500 &lt; 1000，那么 1vmin 就是 5px，1vmax 就是 10px。然而，如果 <code>width=500px</code> ，<code>height=1000px</code>，那么 1vmin 就是 10px，1vmax 就是 5px</p>
+<p>假设我们需要一个正方形的元素，宽度为设备的宽度，高度当然等于宽度啦，所以它可以酱紫写：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ele</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100vmin</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100vmin</span>;</div><div class="line">    <span class="attribute">background-color</span>: orange;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fij7xbmc62j30go0hhq2t.jpg" alt="vmin配图"></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/08/14/css里尺寸单位的小事/">
+    <time datetime="2017-08-14T05:28:16.000Z" class="entry-date">
+        2017-08-14
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2017/08/01/茶话viewport/" rel="next">茶话viewport <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/14/css里尺寸单位的小事/">css里尺寸单位的小事</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/01/茶话viewport/">茶话viewport</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/14/你能用 css 为导航做的效果/">你能用css为导航添加的效果</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/01/CSS冷技巧/">CSS冷技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/15/纯 css 实现点击切换轮播效果/">纯 css 实现点击切换轮播效果</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
