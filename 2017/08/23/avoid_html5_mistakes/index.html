@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="不必要的 type 属性这是个常见的问题但并不是一个错误，只是我们应该通过最佳实践去避免这种风格。在 html5 里 &amp;lt;script&amp;gt; 和 &amp;lt;style&amp;gt; 都已经不再需要 type 属性，所有浏览器已经默认脚本是 javascript 样式是 css 那么也就没必要再多此一举了。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>避免常见的 html5 的错误用法 | wonderland of code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="不必要的 type 属性这是个常见的问题但并不是一个错误，只是我们应该通过最佳实践去避免这种风格。在 html5 里 &amp;lt;script&amp;gt; 和 &amp;lt;style&amp;gt; 都已经不再需要 type 属性，所有浏览器已经默认脚本是 javascript 样式是 css 那么也就没必要再多此一举了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="避免常见的 html5 的错误用法">
+<meta property="og:url" content="http://yoursite.com/2017/08/23/avoid_html5_mistakes/index.html">
+<meta property="og:site_name" content="wonderland of code">
+<meta property="og:description" content="不必要的 type 属性这是个常见的问题但并不是一个错误，只是我们应该通过最佳实践去避免这种风格。在 html5 里 &amp;lt;script&amp;gt; 和 &amp;lt;style&amp;gt; 都已经不再需要 type 属性，所有浏览器已经默认脚本是 javascript 样式是 css 那么也就没必要再多此一举了。">
+<meta property="og:updated_time" content="2017-08-23T09:00:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="避免常见的 html5 的错误用法">
+<meta name="twitter:description" content="不必要的 type 属性这是个常见的问题但并不是一个错误，只是我们应该通过最佳实践去避免这种风格。在 html5 里 &amp;lt;script&amp;gt; 和 &amp;lt;style&amp;gt; 都已经不再需要 type 属性，所有浏览器已经默认脚本是 javascript 样式是 css 那么也就没必要再多此一举了。">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="wonderland of code" rel="home">wonderland of code</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-avoid_html5_mistakes" class="post-avoid_html5_mistakes post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      避免常见的 html5 的错误用法
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/23/avoid_html5_mistakes/" data-id="cj6osmt9y0006xl5hywxvd1uq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="不必要的-type-属性"><a href="#不必要的-type-属性" class="headerlink" title="不必要的 type 属性"></a>不必要的 type 属性</h2><p>这是个常见的问题但并不是一个错误，只是我们应该通过最佳实践去避免这种风格。在 html5 里 <code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code> 都已经不再需要 type 属性，所有浏览器已经默认脚本是 javascript 样式是 css 那么也就没必要再多此一举了。</p>
+<a id="more"></a>
+<p>拒绝酱紫的写法 👇</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"global.css"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"scripts.js"</span> /&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">``` </div><div class="line"></div><div class="line">改为：</div><div class="line"></div><div class="line">```html</div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"global.css"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"scripts.js"</span>/&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="标签的错误嵌套"><a href="#标签的错误嵌套" class="headerlink" title="标签的错误嵌套"></a>标签的错误嵌套</h2><p><code>&lt;a href=&quot;&quot;&gt;</code> 标记不可以嵌套交互式的元素：<code>&lt;a&gt;</code>、设置了 controls 的 <code>&lt;audio&gt;</code> 和 <code>&lt;video&gt;</code>、<code>button</code>、<code>&lt;detalist&gt;</code>、<code>&lt;embed&gt;</code>、<code>&lt;iframe&gt;</code>、设置了 usemap 属性的<code>&lt;img&gt;</code> 和 <code>&lt;object&gt;</code>、type 不为 hidden 的<code>&lt;input&gt;</code>、<code>&lt;keygen&gt;</code>、<code>&lt;label&gt;</code>、<code>&lt;menu&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;textarea&gt;</code>。</p>
+<p>还有这些也是浏览器所无法正常解析的：<span style="color: #ccc;">有些可能被解析但有可能到不到预想的目的</span></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>click<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">button</span>&gt;</span>click<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">cols</span>=<span class="string">"10"</span> <span class="attr">rows</span>=<span class="string">"5"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="别使用-section-作为-div-的替代品"><a href="#别使用-section-作为-div-的替代品" class="headerlink" title="别使用 section 作为 div 的替代品"></a>别使用 section 作为 div 的替代品</h2><p><span style="color: #58a;">有时你会见到或者自己书写出这样的代码 👇 </span> 随意将 html5 的 <code>&lt;section&gt;</code> 等价于 <code>&lt;div&gt;</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>test page<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"secondary"</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><span style="color: #faa;">这并不正确！</span> <code>&lt;section&gt;</code> 并不是样式容器，它表示内容中用来帮助构建文档概要的语义部分。所以你可以这样更改：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>test page<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">"main"</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">aside</span> <span class="attr">role</span>=<span class="string">"complementary"</span> <span class="attr">class</span>=<span class="string">"complementary"</span>&gt;</span><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在这个栗子中，出现了 <code>role</code> 这个属性，它的作用是告诉屏幕朗读程序、或盲人设备，这个元素所扮演的角色，使用它可以增强文本的可读性和语义化。在 html5 中，标记本身就是有语义的，因此 <code>role</code> 是不必添加的或者说不推荐的，但是 bootstrap 的案例中蛮多都是有类似的属性及声明的，目的就是为了兼容老版本的浏览器。如果你的项目中并不准备优雅降级支持老版本，不妨不使用 <code>role</code> 。</p>
+<h3 id="何时使用-role"><a href="#何时使用-role" class="headerlink" title="何时使用 role"></a>何时使用 role</h3><p>role 所发挥的作用是供有障碍人士使用，但是这并不意味着每个标记都需要增加它，因为对于正常文本来说，它本身就是可读的。role 属性的应用主要是表单，譬如说输入密码，身体健康的用户可以用 placeholder 提示输入密码，但是对于残障人士来说，就无效了，这时就可以请出 <code>role</code> 啦。另外，在老版本的浏览器中由于不支持 html5 标记，所以也还是 hin 有必要使用 role 哒。</p>
+<h2 id="只在需要时使用-header-和-hgroup"><a href="#只在需要时使用-header-和-hgroup" class="headerlink" title="只在需要时使用 header 和 hgroup"></a>只在需要时使用 header 和 hgroup</h2><p>首先我们需要明确 <code>&lt;header&gt;</code> 标记它代表“网页”或者“section”的页眉，通常包括了 h1-h6 或者是 hgroup ，作为整个页面或者一个内容块的标题。也可以包裹一节的目录、搜索框、导航或者相关的 logo。页面没有限制 header 的个数，但是也别乱嵌套！</p>
+<p><span style="color: #58a;">有时你会见到或者自己书写出这样的代码 👇 </span> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>My best blog post<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- Article content --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如果你的 header 区域只包含了一个头部元素，请你丢掉 header 🔥！丢掉 header 🔥！丢掉 header 🔥！直接写成：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>My best blog post<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- Article content --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="hgroup"><a href="#hgroup" class="headerlink" title="hgroup"></a>hgroup</h3><p>首先， group 这个词表示“分组”，<code>&lt;hgroup&gt;</code> 表示网页或 section 的标题，当元素有多个层级时，它可以将 h1-h6 元素放在其中，譬如文章的主标题与副标题的组合：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">hgroup</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>My best blog post<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>by Rich Clark<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">hgroup</span>&gt;</span></div><div class="line">``` </div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color: #58a;"</span>&gt;</span>有时你会见到或者自己书写出这样的代码 👇 <span class="tag">&lt;/<span class="name">span</span>&gt;</span> </div><div class="line"></div><div class="line">```html</div><div class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">hgroup</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>My best blog post<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">hgroup</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>by Rich Clark<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这个栗子中，标题标记只有 only one ，请让 h1 裸奔：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>My best blog post<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>by Rich Clark<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>只有一个 h1-h6 标记就不要使用 hgroup</li>
+<li>连续多个 h1-h6 可以使用</li>
+<li>连续多个标题与其他文章数据，h1-h6 标记用 hgroup 包裹，与其他文章数据一起放入 header</li>
+</ul>
+<p>张嘴，再来一栗🌰</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">hgroup</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>My company<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h2</span>&gt;</span>Established 1893<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">hgroup</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如果 header 唯一的子级是 hgroup，那还要 header 干神马？header 中没有其他元素，直接干掉 header！</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">hgroup</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>My company<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>Established 1893<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">hgroup</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="别把所有列表式的链接都放进-nav"><a href="#别把所有列表式的链接都放进-nav" class="headerlink" title="别把所有列表式的链接都放进 nav"></a>别把所有列表式的链接都放进 nav</h2><p><code>&lt;nav&gt;</code> 代表页面中链接到其他页面或本页面其他部分的区块，导航链接区域，用于定义页面的主要导航部分。但是需要注意的是不是所有页面上的链接都得放进 nav 中。这个元素的本意是用作<strong>主要的</strong>导航区块。</p>
+<p>这里的“主要的”我加粗了字体，那么什么叫做“主要的”呢？大致上可以分为：</p>
+<ol>
+<li>主要导航</li>
+<li>站内搜索</li>
+<li>很长很长的文章中，小标题导航</li>
+<li>略有争议的二级导航</li>
+</ol>
+<p>没有一个绝对的对或错，根据一个非正式投票，以及“不管你放不放反正我不放”的情况，下面罗列了不将列表放进 nav 中的情况：</p>
+<ol>
+<li>分页</li>
+<li>社交链接</li>
+<li>博客文章标签、分类</li>
+<li>三级导航</li>
+<li>hin 长的 footer</li>
+</ol>
+<p>在 footer 中常见的服务条款、版权声明、友情链接等等，footer 自身已经足以应付，虽然 nav 也可以用在这里，但通常来说不是非它不可的。鞠个躬独立离开吧……</p>
+<h2 id="figure-figcaption"><a href="#figure-figcaption" class="headerlink" title="figure figcaption"></a>figure figcaption</h2><p>第一，别把一切 img 都写成 figure。在规范中，<code>&lt;figure&gt;</code> 被描述为“一些流动的内容，有时会包含于自身的标题说明，一般在文档流中会作为独立的单元引用。”这也就是 figure 的美妙点——它能从主内容页移动到 sidebar 里而不影响文档流。如果只是单纯的为了呈现图片也不在文档其他地方引用，问问自己“这个图片是否必须与上下文有关？”如果答案是否定的，就放过 <code>&lt;figure&gt;</code> 吧，也许那只是一个 <code>&lt;aside&gt;</code> 。“可以将它移动到附录中吗？”两个答案都是肯定，那么它则可能是 <code>&lt;figure&gt;</code>。 </p>
+<p>第二，web 标准的职责是精确的使用标签描述内容，那么 figure 可以是视频音频、图表、引用文字、表格、代码，不要把 figure 局限于图片。</p>
+<h2 id="语义错误"><a href="#语义错误" class="headerlink" title="语义错误"></a>语义错误</h2><p>页面被正常解析但实际上并不符合语义，这是因为浏览器自带的容错机制，对于不规范的写法也能够正常解析。但因各浏览器容错机制不同，请尽量按照规范书写。</p>
+<h3 id="块级元素可包含内联元素和某些块级元素，内联元素不能包含块级元素"><a href="#块级元素可包含内联元素和某些块级元素，内联元素不能包含块级元素" class="headerlink" title="块级元素可包含内联元素和某些块级元素，内联元素不能包含块级元素"></a>块级元素可包含内联元素和某些块级元素，内联元素不能包含块级元素</h3><p><span style="color: #58a;">有时你会见到或者自己书写出这样的代码 👇 </span> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>wrong<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这 👆 当然是错误的，你可以 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>...<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>当然，你也不可以：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h1</span>&gt;</span>...<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">div</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="li-可以包含-div-以及-ol-ul"><a href="#li-可以包含-div-以及-ol-ul" class="headerlink" title="li 可以包含 div 以及 ol || ul"></a>li 可以包含 div 以及 ol || ul</h3><p>你不可以： </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>back<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>但你可以： </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">ol</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><a href="http://html5doctor.com/the-hgroup-element/?utm_source=caibaojian.com" target="_blank" rel="external">使用标记参考</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/08/23/avoid_html5_mistakes/">
+    <time datetime="2017-08-23T08:49:46.000Z" class="entry-date">
+        2017-08-23
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2017/08/14/unit_of_CSS/" rel="next">CSS里尺寸单位的小事 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/23/avoid_html5_mistakes/">避免常见的 html5 的错误用法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/14/unit_of_CSS/">CSS里尺寸单位的小事</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/01/viewport/">茶话viewport</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/14/navigation _effect/">你能用CSS为导航添加的效果</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/01/CSS_techniques/">CSS冷技巧</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
