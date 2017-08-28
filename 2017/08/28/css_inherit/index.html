@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="层叠和继承，是 css 两大核心概念，当样式表越写越复杂，你可能会开始考虑为啥页面中的元素会显示成那样？有时样式又会冲突，也就是一个元素被多个规则声明了相同的 css 属性。幸好 css 会使用一种机制处理掉冲突，这种机制就叫做“层叠”，用于管控样式间相互作用的方式，出现冲突时判断哪个样式的优先级高，就执行哪一种。" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>层叠和继承 | wonderland of code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="层叠和继承，是 css 两大核心概念，当样式表越写越复杂，你可能会开始考虑为啥页面中的元素会显示成那样？有时样式又会冲突，也就是一个元素被多个规则声明了相同的 css 属性。幸好 css 会使用一种机制处理掉冲突，这种机制就叫做“层叠”，用于管控样式间相互作用的方式，出现冲突时判断哪个样式的优先级高，就执行哪一种。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="层叠和继承">
+<meta property="og:url" content="http://yoursite.com/2017/08/28/css_inherit/index.html">
+<meta property="og:site_name" content="wonderland of code">
+<meta property="og:description" content="层叠和继承，是 css 两大核心概念，当样式表越写越复杂，你可能会开始考虑为啥页面中的元素会显示成那样？有时样式又会冲突，也就是一个元素被多个规则声明了相同的 css 属性。幸好 css 会使用一种机制处理掉冲突，这种机制就叫做“层叠”，用于管控样式间相互作用的方式，出现冲突时判断哪个样式的优先级高，就执行哪一种。">
+<meta property="og:updated_time" content="2017-08-28T09:32:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="层叠和继承">
+<meta name="twitter:description" content="层叠和继承，是 css 两大核心概念，当样式表越写越复杂，你可能会开始考虑为啥页面中的元素会显示成那样？有时样式又会冲突，也就是一个元素被多个规则声明了相同的 css 属性。幸好 css 会使用一种机制处理掉冲突，这种机制就叫做“层叠”，用于管控样式间相互作用的方式，出现冲突时判断哪个样式的优先级高，就执行哪一种。">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="wonderland of code" rel="home">wonderland of code</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-css_inherit" class="post-css_inherit post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      层叠和继承
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/28/css_inherit/" data-id="cj6vywf6o0004o2jjrqi8fzof" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>层叠和继承，是 css 两大核心概念，当样式表越写越复杂，你可能会开始考虑为啥页面中的元素会显示成那样？有时样式又会冲突，也就是一个元素被多个规则声明了相同的 css 属性。幸好 css 会使用一种机制处理掉冲突，这种机制就叫做“层叠”，用于管控样式间相互作用的方式，出现冲突时判断哪个样式的优先级高，就执行哪一种。</p>
+<a id="more"></a>
+<h2 id="样式层叠的方式"><a href="#样式层叠的方式" class="headerlink" title="样式层叠的方式"></a>样式层叠的方式</h2><p>层叠指一系列的规则，用来确定究竟把哪种样式属性应用到元素身上。浏览器通过层叠规则，判断如何处理一个元素上的多个样式，以及何如处理有冲突的属性。这两种情况都会导致样式冲突：</p>
+<ol>
+<li>继承</li>
+<li>一个元素拥有多个样式</li>
+</ol>
+<h3 id="样式来源于继承"><a href="#样式来源于继承" class="headerlink" title="样式来源于继承"></a>样式来源于继承</h3><p>假设有这样的结构</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">strong</span>&gt;</span>...<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>和这样的样式表：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: Arial,Helvetica,sans-serif;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#58a</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">strong</span>&#123;</div><div class="line">	<span class="attribute">font-size</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个 <code>&lt;strong&gt;</code> 的外观可以在多个标记中定义，它虽然样式只定义了 <code>font-size</code> 但颜色、字体族都从祖辈处继承下来了。</p>
+<h3 id="离它最近的包含它的容器样式胜出"><a href="#离它最近的包含它的容器样式胜出" class="headerlink" title="离它最近的包含它的容器样式胜出"></a>离它最近的包含它的容器样式胜出</h3><p>还是上面的栗子🌰如果继承的 css 属性有冲突怎么办？</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: Arial,Helvetica,sans-serif;</div><div class="line">	<span class="attribute">color</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#58a</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">strong</span>&#123;</div><div class="line">	<span class="attribute">font-size</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在没有第6行代码的情况下 <code>&lt;strong&gt;</code> 肯定是继承红色无疑，但当 <code>&lt;p&gt;</code> 标记重新定义后， <code>&lt;strong&gt;</code> 则会继承到离它最近的，包含它的容器的样式，或者说 #58a 色覆盖了先前定义的红色。</p>
+<h3 id="直接应用在标记本身身上的样式胜出"><a href="#直接应用在标记本身身上的样式胜出" class="headerlink" title="直接应用在标记本身身上的样式胜出"></a>直接应用在标记本身身上的样式胜出</h3><p>把上面代码再加加工:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: Arial,Helvetica,sans-serif;</div><div class="line">	<span class="attribute">color</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#58a</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">strong</span>&#123;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#faa</span>;</div><div class="line">	<span class="attribute">font-size</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>现在，直接为 <code>&lt;strong&gt;</code>  声明了样式，浏览器最终会以 #faa 的样式呈现。或者说 #58a 的样式覆盖了 red 的样式，#faa 的样式覆盖了 #58a 的样式。</p>
+<h3 id="一个标记多个样式"><a href="#一个标记多个样式" class="headerlink" title="一个标记多个样式"></a>一个标记多个样式</h3><p>这时除了继承样式外，起决定性的，就跟书写顺序及权重大小有关了。权重值也被称为“特指度” (specificity) <span style="color: #ccc;">这篇博客不会详细说明元素权重值如何计算，如果你听过我的课，请翻阅你的笔记，如果你忘了，请带上我的 40m 大刀联系我。如果你既没有听过我的课，又不知道如何计算……那你是怎么找到这个博客地址的？？额我是说那……我找时间再写一个好了……</span></p>
+<p>比如一个元素样式来源有外部 <code>&lt;link&gt;</code> 、有内部 <code>&lt;style&gt;</code> 甚至还有元素自己的类等等，那么</p>
+<ul>
+<li>当声明的<strong>样式属性不同</strong>，所有样式都作用在该元素</li>
+<li>当<strong>权重值相同，样式属性相同</strong>，后声明的样式会覆盖前面声明的样式</li>
+<li>当<strong>权重值不同，样式属性相同</strong>，以权重大的为准</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>接着我们再来看看“继承”。小孩会从父母处继承一些身体特征，比如发色、瞳孔色、身高，或者…财富😂等等。有时还会隔代继承。和人类相似，html 标记也会从祖辈那里继承一些 css 属性。</p>
+<h2 id="什么是继承"><a href="#什么是继承" class="headerlink" title="什么是继承"></a>什么是继承</h2><p>继承是指应用在某个标记上的 css 属性传给了内部嵌套的标记。比如说 <code>&lt;div&gt;</code>、<code>&lt;p&gt;</code> 等等都始终嵌套在 <code>&lt;body&gt;</code> 里，所以应用在 <code>&lt;body&gt;</code> 标记上的属性会被 <code>&lt;div&gt;</code> 和 <code>&lt;p&gt;</code> 继承。比如给 <code>&lt;body&gt;</code> 设置了 <code>color: red</code> 那么 <code>&lt;body&gt;</code> 里的文字标记就会渲染为红色。</p>
+<p>css 属性也会隔代继承。如果 <code>&lt;p&gt;</code> 标记还有 <code>&lt;span&gt;</code> 或者 <code>&lt;em&gt;</code> 或者其他，也会继承应用到 <code>&lt;body&gt;</code> 标记上的样式。</p>
+<p>继承可以为开发节省很多时间，如果没有继承，我们会一次一次声明相同的样式。继承不仅适用于标签样式，如果在某个标记上应用类、或者是后代选择器等样式，标记里子级会从类样式中继承属性。</p>
+<h2 id="简化样式表"><a href="#简化样式表" class="headerlink" title="简化样式表"></a>简化样式表</h2><p>如果想要网页中所有文字都使用某种字体，用不着为每个标记定义样式，你只需要：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: Arial,Helvetica,sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>人无完人，继承也是一样，很多 css 属性不会传给后代标记，而这并不一定就是坏事，如果继承了某些属性，会对网页的外观产生负面的影响。像 <code>border</code> 、<code>margin</code>、<code>background</code> 等就不会继承。</p>
+<h3 id="哪些属性会被继承"><a href="#哪些属性会被继承" class="headerlink" title="哪些属性会被继承"></a>哪些属性会被继承</h3><p>像以下这些属性都具有继承性：</p>
+<ul>
+<li>color</li>
+<li>font<ul>
+<li>font-family</li>
+<li>font-size</li>
+<li>font-style</li>
+<li>font-variant</li>
+<li>font-weight</li>
+</ul>
+</li>
+<li>letter-spacing</li>
+<li>word-spacing</li>
+<li>line-height</li>
+<li>text-align</li>
+<li>text-decorition</li>
+<li>text-indent</li>
+<li>text-shadow</li>
+<li>text-transform</li>
+<li>list-style </li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/08/28/css_inherit/">
+    <time datetime="2017-08-28T09:32:31.000Z" class="entry-date">
+        2017-08-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2017/08/23/avoid_html5_mistakes/" rel="next">避免常见的 html5 的错误用法 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/28/css_inherit/">层叠和继承</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/23/avoid_html5_mistakes/">避免常见的 html5 的错误用法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/14/unit_of_CSS/">CSS里尺寸单位的小事</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/01/viewport/">茶话viewport</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/14/navigation _effect/">你能用CSS为导航添加的效果</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
