@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/28/css_inherit/index.html">
 <meta property="og:site_name" content="wonderland of code">
 <meta property="og:description" content="层叠和继承，是 css 两大核心概念，当样式表越写越复杂，你可能会开始考虑为啥页面中的元素会显示成那样？有时样式又会冲突，也就是一个元素被多个规则声明了相同的 css 属性。幸好 css 会使用一种机制处理掉冲突，这种机制就叫做“层叠”，用于管控样式间相互作用的方式，出现冲突时判断哪个样式的优先级高，就执行哪一种。">
-<meta property="og:updated_time" content="2017-08-28T09:37:30.000Z">
+<meta property="og:updated_time" content="2017-08-29T09:12:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="层叠和继承">
 <meta name="twitter:description" content="层叠和继承，是 css 两大核心概念，当样式表越写越复杂，你可能会开始考虑为啥页面中的元素会显示成那样？有时样式又会冲突，也就是一个元素被多个规则声明了相同的 css 属性。幸好 css 会使用一种机制处理掉冲突，这种机制就叫做“层叠”，用于管控样式间相互作用的方式，出现冲突时判断哪个样式的优先级高，就执行哪一种。">
@@ -79,7 +79,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/28/css_inherit/" data-id="cj6vz0ft20006p9jjhbo4b6li" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/28/css_inherit/" data-id="cj7qz1n1y00042agqttu0x36y" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -110,6 +110,13 @@
 <li>当<strong>权重值相同，样式属性相同</strong>，后声明的样式会覆盖前面声明的样式</li>
 <li>当<strong>权重值不同，样式属性相同</strong>，以权重大的为准</li>
 </ul>
+<p>此外，还需要注意的是继承的属性没有权重值，即使一个标记从权重值高的样式中继承到了属性，继承的属性也会被其他方式覆盖。</p>
+<h2 id="控制层叠"><a href="#控制层叠" class="headerlink" title="控制层叠"></a>控制层叠</h2><p>当元素样式变多以后元素最终执行的样式可能会与预期的不同，这种问题也会与层叠有关。</p>
+<p>浏览器为各种标记提供了默认的样式，比如链接的颜色、下划线，无序列表向右缩进。html 标准没有定义任何的样式，浏览器提供这些格式是为了让基本的 html 更易于阅读，虽然不同的浏览器提供的格式大体相似，但具体实现起来，却各不相同。</p>
+<p>比如 Chrome 和 FF 使用 <code>padding</code> 缩进无序列表，而 IE 则使用 <code>margin</code>。为了避免样式的不一致性，我们也会使用到重置文件，比如 <code>normalize.css</code> 。</p>
+<p>处理方式还有其他的好几种，比如你可以使用 <code>!important</code> 确保属性始终有效，或者加强元素权重，或者顺利覆盖掉前面的声明。</p>
+<p>另外的处理方式还包括再编写一个样式表，在链接了常规的样式表后，再链接这个新的样式表，当权重相同，覆盖原有样式。</p>
+<p>你可以访问这里 👉 了解为什么应该彻底不用 id 选择器 <a href="https://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/" target="_blank" rel="external">When using IDs can be a pain in the class…</a></p>
 <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>接着我们再来看看“继承”。小孩会从父母处继承一些身体特征，比如发色、瞳孔色、身高，或者…财富😂等等。有时还会隔代继承。和人类相似，html 标记也会从祖辈那里继承一些 css 属性。</p>
 <h2 id="什么是继承"><a href="#什么是继承" class="headerlink" title="什么是继承"></a>什么是继承</h2><p>继承是指应用在某个标记上的 css 属性传给了内部嵌套的标记。比如说 <code>&lt;div&gt;</code>、<code>&lt;p&gt;</code> 等等都始终嵌套在 <code>&lt;body&gt;</code> 里，所以应用在 <code>&lt;body&gt;</code> 标记上的属性会被 <code>&lt;div&gt;</code> 和 <code>&lt;p&gt;</code> 继承。比如给 <code>&lt;body&gt;</code> 设置了 <code>color: red</code> 那么 <code>&lt;body&gt;</code> 里的文字标记就会渲染为红色。</p>
 <p>css 属性也会隔代继承。如果 <code>&lt;p&gt;</code> 标记还有 <code>&lt;span&gt;</code> 或者 <code>&lt;em&gt;</code> 或者其他，也会继承应用到 <code>&lt;body&gt;</code> 标记上的样式。</p>
@@ -158,6 +165,8 @@
 <nav class="nav-single">
     <h3 class="assistive-text">文章导航</h3>
     
+        <span class="nav-previous"><a href="/2017/09/10/picture_introduce/" rel="prev"><span class="meta-nav">←</span> web 图片单位简介</a></span>
+    
     
         <span class="nav-next"><a href="/2017/08/23/avoid_html5_mistakes/" rel="next">避免常见的 html5 的错误用法 <span class="meta-nav">→</span></a></span>
     
@@ -190,6 +199,10 @@
       <ul>
         
           <li>
+            <a href="/2017/09/10/picture_introduce/">web 图片单位简介</a>
+          </li>
+        
+          <li>
             <a href="/2017/08/28/css_inherit/">层叠和继承</a>
           </li>
         
@@ -203,10 +216,6 @@
         
           <li>
             <a href="/2017/08/01/viewport/">茶话viewport</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/14/navigation _effect/">你能用CSS为导航添加的效果</a>
           </li>
         
       </ul>

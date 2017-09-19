@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fiejy96zmdj312w15ogyp.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1fiek5e0izgj312w15oan7.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fij7xbmc62j30go0hhq2t.jpg">
-<meta property="og:updated_time" content="2017-08-15T12:57:37.000Z">
+<meta property="og:updated_time" content="2017-08-31T07:35:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS里尺寸单位的小事">
 <meta name="twitter:description" content="在书写样式表时都会与单位关联，例如 .container{width: 100px;} 或者是 .left{width: 50%;} 似乎常用到的单位也就那么两个，而实际上 css 中的可用单位的数量还包含了其他。除去绝对单位和常用的 px 、 % ，这篇博还将介绍几种你也许从没用过或见过的计量单位。可以通过 caniuse 这个网站查看其兼容性。">
@@ -85,7 +85,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/14/unit_of_CSS/" data-id="cj6vz0ftj000dp9jj2j2e5h1o" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/08/14/unit_of_CSS/" data-id="cj7qz1n2800072agqt21itjwq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -93,7 +93,7 @@
       
         <p>在书写样式表时都会与单位关联，例如 <code>.container{width: 100px;}</code> 或者是 <code>.left{width: 50%;}</code> 似乎常用到的单位也就那么两个，而实际上 css 中的可用单位的数量还包含了其他。除去绝对单位和常用的 px 、 % ，这篇博还将介绍几种你也许从没用过或见过的计量单位。可以通过 <a href="http://caniuse.com/" target="_blank" rel="external">caniuse</a> 这个网站查看其兼容性。</p>
 <a id="more"></a>
-<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><p>首先来看看 em 这个单位，浏览器默认渲染的文字大小是 16px ，当然了，我说的是在没有经过人为更改过设置的情况下。em 是一个相对大小，值可以设置为 <code>1em</code> <code>1.5em</code> <code>0.5em</code> 等，还可以指定到小数点后3位。而其中“相对”的意思是指：</p>
+<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><p>首先来看看 em 这个单位，它来源于（纸张）印刷业，指某个字体中，大写字母 M 的大小。进入 web 领域后，em 的含义与印刷业不同了，指代基准字号，浏览器默认渲染的文字大小是 16px ，当然了，我说的是在没有经过人为更改过设置的情况下。em 是一个相对大小，值可以设置为 <code>1em</code> <code>1.5em</code> <code>0.5em</code> 等，还可以指定到小数点后3位。而其中“相对”的意思是指：</p>
 <blockquote>
 <p>相对计算必然有个参考物，这里相对所指的是相对于父元素计算后的 <code>font-size</code> px 值。</p>
 </blockquote>
@@ -122,7 +122,7 @@
 <li>父级容器 box2 的 font-size 值为 32px ,width 值 64px 也是意料之中的了，那 box2-1 呢？</li>
 <li>box2-1 本身应该继承 box2 的 font-size，但 box2-1 重新声明了 font-size 的值，所以此时 box2-1 的值从 1em = 32px 被重新定义为了 1em = 20px，所以此时 1em = 20px，所以 width 值为 20 * 2 = 40px</li>
 </ul>
-<h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><p>有时你或许想基于一个唯一的度量标准来按比例缩放，那就一定少不了 rem 。用上面的示例将单位换成 rem 试试呢？</p>
+<h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><p>有时你或许想基于一个唯一的度量标准来按比例缩放，那就一定少不了 rem 。它是 root em 的简称，意思就是字号大小基于根元素而定。用上面的示例将单位换成 rem 试试呢？</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fiek5e0izgj312w15oan7.jpg" alt="rem示例截图"></p>
 <p>可以看到父子级的 font-size 和 width 值都相同，都是 32px，不会通过父级关系层层继承、层层翻倍。那么这个 rem 究竟是以谁的 font-size 为基准的呢？</p>
 <p>首先需要明白的一点在于，rem 中的这个 “ r “ 指的是 <code>root</code> 也就是根元素 <code>html</code> ，酱紫一来就解释得通了，只需要更改 html 的 font-size 值，其他元素的值就基于它改变了。</p>
@@ -190,6 +190,10 @@
       <ul>
         
           <li>
+            <a href="/2017/09/10/picture_introduce/">web 图片单位简介</a>
+          </li>
+        
+          <li>
             <a href="/2017/08/28/css_inherit/">层叠和继承</a>
           </li>
         
@@ -203,10 +207,6 @@
         
           <li>
             <a href="/2017/08/01/viewport/">茶话viewport</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/14/navigation _effect/">你能用CSS为导航添加的效果</a>
           </li>
         
       </ul>
